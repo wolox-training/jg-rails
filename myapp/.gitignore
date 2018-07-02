@@ -13,11 +13,12 @@
 !/log/.keep
 !/tmp/.keep
 
+/test/*
+/test/
+test/*
+
 # Ignore uploaded files in development
 /storage/*
-/test
-/test/
-/test/*
 
 /node_modules
 /yarn-error.log
