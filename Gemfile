@@ -38,6 +38,9 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'rubocop', require: false
 gem 'devise'
+gem 'versionist'
+gem 'jwt'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
