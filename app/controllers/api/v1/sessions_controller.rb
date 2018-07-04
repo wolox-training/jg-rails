@@ -36,7 +36,7 @@ module Api
         if current_user.save
           head :ok
         else
-          render json: { error: 'Error invalidating all tokens' }, status: 500
+          render json: { error: 'Error invalidating all tokens' }, status: :internal_server_error
         end
       end
 
