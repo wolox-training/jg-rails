@@ -36,10 +36,19 @@ gem 'jbuilder', '~> 2.5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
+# Wolox training
 gem 'rubocop', require: false
 gem 'devise'
 gem 'versionist'
 gem 'jwt'
+group :test do
+  gem 'rspec-rails', '~> 3.7'
+  gem 'database_cleaner'
+  gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
+  gem 'factory_bot_rails'
+  gem 'shoulda-matchers'
+end
+# End Wolox training
 
 
 group :development, :test do
