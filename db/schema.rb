@@ -25,15 +25,6 @@ ActiveRecord::Schema.define(version: 2018_07_06_152051) do
     t.index ["title"], name: "index_books_on_title", unique: true
   end
 
-  create_table "rents", force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "book_id"
-    t.date "from", null: false
-    t.string "to", default: "", null: false
-    t.index ["book_id"], name: "index_rents_on_book_id"
-    t.index ["user_id"], name: "index_rents_on_user_id"
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -49,7 +40,7 @@ ActiveRecord::Schema.define(version: 2018_07_06_152051) do
     t.datetime "updated_at", null: false
     t.string "first_name", null: false
     t.string "last_name", null: false
-    t.string "verification_code", default: "", null: false
+    t.string "verification_code", default: "f", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
