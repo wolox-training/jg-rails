@@ -1,5 +1,6 @@
 class CreateBooks < ActiveRecord::Migration[5.2]
   def change
+    drop_table :books
     create_table :books do |t|
       ## Database authenticatable
       t.string :Genre, null: false, default: ''
