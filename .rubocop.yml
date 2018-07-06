@@ -4,13 +4,3 @@ LineLength:
    Max: 99
 Style/FrozenStringLiteralComment:
    Enabled: false
-Style/SymbolArray:
-  Enabled: false
-Rails/Blank:
-  Enabled: false
-Layout/TrailingBlankLines:
-  Enabled: false
-Style/SafeNavigation:
-  Enabled: false
-Style/RescueStandardError:  
-  Enabled: false
