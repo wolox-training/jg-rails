@@ -12,7 +12,7 @@ before_install:
   - bundle exec bin/rails db:migrate RAILS_ENV=test
 
 script:
-  - bundle exec rubocop app -R
+  - bundle exec rubocop spec app -R
   - bundle exec rspec
 
 cache:
