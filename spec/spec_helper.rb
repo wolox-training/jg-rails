@@ -36,7 +36,6 @@ RSpec.configure do |config|
     # `true` in RSpec 4.
     mocks.verify_partial_doubles = true
   end
-
   # This option will default to `:apply_to_host_groups` in RSpec 4 (and will
   # have no way to turn it off -- the option exists only for backwards
   # compatibility in RSpec 3). It causes shared context metadata to be
@@ -92,4 +91,5 @@ RSpec.configure do |config|
   # test failures related to randomization by passing the same `--seed` value
   # as the one that triggered the failure.
   # Kernel.srand config.seed
+  Dir[Rails.root.join('spec', 'support', '**', '*.rb')].each { |f| require f }
 end
