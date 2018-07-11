@@ -4,11 +4,11 @@ module Api
       include Wor::Paginate
       def index
         books = Book.all
-        render_paginated books, each_serializer: EachBookSerializer
+        render_paginated books, each_serializer: IndexBookSerializer
       end
 
       def show
-        render json: Book.find(params[:id]), serializer: BookSerializer
+        render json: Book.find(params[:id]), serializer: ShowBookSerializer
       end
     end
   end
