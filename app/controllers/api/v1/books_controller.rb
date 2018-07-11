@@ -1,6 +1,6 @@
 module Api
   module V1
-    class BooksController < ApplicationController
+    class BooksController < ApiController
       include Wor::Paginate
       rescue_from ActiveRecord::RecordNotFound, with: :error_404
 
