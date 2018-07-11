@@ -5,7 +5,7 @@ module Api
       rescue_from ActiveRecord::RecordNotFound, with: :error_404
 
       def error_404
-        render json: [error: '404']
+        render json: { message: 'The record was not found' }, status: :not_found
       end
 
       def index
