@@ -26,18 +26,29 @@ describe Api::V1::BooksController, type: :controller do
 
   describe 'GET #show' do
     context 'When fetching a book' do
-      let!(:book) { create(:book) }
+      context 'If the book exist' do
+        let!(:book) { create(:book) }
 
-      before do
-        get :show, params: { id: book.id }
+        before do
+          get :show, params: { id: book.id }
+        end
+
+        it 'Responses with the book json' do
+          expect(response.body).to eq BookSerializer.new(book).to_json
+        end
+
+        it 'Responds with 200 status' do
+          expect(response).to have_http_status(:ok)
+        end
       end
 
-      it 'responses with the book json' do
-        expect(response.body).to eq BookSerializer.new(book).to_json
-      end
-
-      it 'responds with 200 status' do
-        expect(response).to have_http_status(:ok)
+      context 'If the book does not exist' do
+        before do
+          get :show, params: { id: 100 }
+        end
+        it 'Responds with 404 status' do
+          expect(response).to have_http_status(:not_found)
+        end
       end
     end
   end
