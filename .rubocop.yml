@@ -6,4 +6,4 @@ Style/FrozenStringLiteralComment:
    Enabled: false
 Metrics/BlockLength:
   Exclude:
-    - 'spec/models/book_spec.rb'
+    - 'spec/**/*'
