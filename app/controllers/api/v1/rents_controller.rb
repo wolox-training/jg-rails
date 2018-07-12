@@ -8,7 +8,7 @@ module Api
       end
 
       def create
-        if current_user.id != params[:rent][:user_id]
+        if params[:user_id].to_i != params[:rent][:user_id].to_i
           render json: { message: 'User id not allowed' }, status:	:unprocessable_entity
           return
         end
