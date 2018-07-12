@@ -48,6 +48,9 @@ group :test do
   gem 'factory_bot_rails'
   gem 'shoulda-matchers'
 end
+gem 'wor-paginate'
+gem 'active_model_serializers', '~> 0.10.0'
+
 # End Wolox training
 
 
