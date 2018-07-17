@@ -1,5 +1,5 @@
 class RentMailer < ActionMailer::Base
-  default from: 'from@example.com'
+  default from: Rails.application.credentials.default_mail
   layout 'mailer'
   def new_rent(rent)
     @rent = rent
