@@ -7,7 +7,7 @@ class RentMailer < ActionMailer::Base
     @book = Book.find(rent.book_id)
     @user = User.find(rent.user_id)
     locale(@user)
-    mail to: @user.email
+    mail to: @user.email, subject: I18n.t('new_rent')
   end
 
   private
