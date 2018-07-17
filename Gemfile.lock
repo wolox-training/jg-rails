@@ -127,9 +127,12 @@ GEM
     formtastic_i18n (0.6.0)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
+<<<<<<< 7ffeb5ae08e56eb4e79e23d42a51d2db5c537a59
     has_scope (0.7.2)
       actionpack (>= 4.1)
       activesupport (>= 4.1)
+=======
+>>>>>>> mail rent creation
     hoe (3.17.0)
       rake (>= 0.8, < 13.0)
     i18n (1.0.1)
