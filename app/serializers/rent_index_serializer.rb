@@ -1,11 +1,6 @@
 class RentIndexSerializer < ActiveModel::Serializer
-  attributes :id, :from, :to, :book, :user
+  attributes :id, :from, :to
 
-  def user
-    UserSerializer.new(User.find(object.user_id))
-  end
-
-  def book
-    Book.find(object.book_id)
-  end
+  belongs_to :book
+  belongs_to :user
 end
