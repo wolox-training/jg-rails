@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< 2dac6f48a9a3bd579b6c7e88d161b909fb387b9d
 ActiveRecord::Schema.define(version: 2018_07_19_145129) do
+=======
+ActiveRecord::Schema.define(version: 2018_07_17_212350) do
+>>>>>>> added internationalization to emails
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
