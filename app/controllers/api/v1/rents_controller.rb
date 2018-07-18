@@ -1,7 +1,6 @@
 module Api
   module V1
     class RentsController < ApiController
-      include Wor::Paginate
       def index
         rents = Rent.where(user_id: params[:user_id])
         render_paginated rents, each_serializer: RentIndexSerializer
