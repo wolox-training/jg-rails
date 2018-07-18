@@ -2,3 +2,4 @@ test/*
 tmp/*
 log/*
 .vscode/*
+config/master.key
