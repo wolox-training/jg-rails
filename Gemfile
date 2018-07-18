@@ -54,6 +54,7 @@ gem 'mailtrap'
 gem 'sidekiq'
 gem 'redis'
 gem 'activeadmin'
+gem "pundit"
 # End Wolox training
 
 
