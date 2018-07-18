@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(version: 2018_07_19_145129) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
   end
 
+<<<<<<< daf33a5ecb354b441b286f698aa9f4ae3e86ad01
   create_table "book_suggestions", force: :cascade do |t|
     t.string "editorial"
     t.float "price"
@@ -60,6 +61,8 @@ ActiveRecord::Schema.define(version: 2018_07_19_145129) do
     t.index ["user_id"], name: "index_book_suggestions_on_user_id"
   end
 
+=======
+>>>>>>> admin view created
   create_table "books", force: :cascade do |t|
     t.string "genre", default: "", null: false
     t.string "author", default: "", null: false
