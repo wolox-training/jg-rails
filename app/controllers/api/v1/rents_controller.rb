@@ -8,7 +8,9 @@ module Api
       end
 
       def create
-        return render json: { message: 'User id not allowed' }, status:	:unprocessable_entity unless check_user_id
+        if check_user_id
+          return render json: { message: 'User id not allowed' }, status:	:unprocessable_entity
+        end
         rent = Rent.new(rent_params)
         return render json: rent.errors, status: :unprocessable_entity unless rent.save
         render json: rent, serializer: RentIndexSerializer, status: :created
