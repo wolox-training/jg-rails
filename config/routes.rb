@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :users do
       resources :rents, only: %i[create index]
     end
+    resources :book_suggestions, only: %i[create]
   end
 
   devise_for :users
