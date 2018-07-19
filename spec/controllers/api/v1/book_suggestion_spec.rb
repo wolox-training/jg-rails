@@ -14,6 +14,7 @@ describe Api::V1::BookSuggestionsController, type: :controller do
         expect(response).to have_http_status(:created)
       end
     end
+    
 
     context 'When creating a suggestion without author' do
       let!(:new_suggestion_attributes) { attributes_for(:book_suggestion, author: nil) }
