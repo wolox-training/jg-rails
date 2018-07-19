@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 describe Api::V1::BookSuggestionsController, type: :controller do
-  include_context 'Authenticated User'
   describe 'POST #create' do
     context 'When creating a valid suggestion' do
       let!(:new_suggestion_attributes) { attributes_for(:book_suggestion) }
