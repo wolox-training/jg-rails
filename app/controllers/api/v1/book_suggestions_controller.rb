@@ -1,6 +1,6 @@
 module Api
   module V1
-    class BookSuggestionsController < ApiController
+    class BookSuggestionsController < ApplicationController
       def create
         book_suggestion = BookSuggestion.new(suggestion_params)
         return render json: book_suggestion.errors, status: :unprocessable_entity unless book_suggestion.save
