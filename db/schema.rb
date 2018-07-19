@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< 5edf74c0343c7fd4f5e032eaeb8bd5d3db512b21
 ActiveRecord::Schema.define(version: 2018_07_19_145129) do
+=======
+ActiveRecord::Schema.define(version: 2018_07_18_222340) do
+>>>>>>> added BookSuggestion
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,7 +50,10 @@ ActiveRecord::Schema.define(version: 2018_07_19_145129) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
   end
 
+<<<<<<< 5edf74c0343c7fd4f5e032eaeb8bd5d3db512b21
 <<<<<<< daf33a5ecb354b441b286f698aa9f4ae3e86ad01
+=======
+>>>>>>> added BookSuggestion
   create_table "book_suggestions", force: :cascade do |t|
     t.string "editorial"
     t.float "price"
@@ -55,14 +62,21 @@ ActiveRecord::Schema.define(version: 2018_07_19_145129) do
     t.string "link", null: false
     t.string "publisher"
     t.string "year"
+<<<<<<< 5edf74c0343c7fd4f5e032eaeb8bd5d3db512b21
     t.bigint "user_id"
+=======
+    t.bigint "user_id", null: false
+>>>>>>> added BookSuggestion
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_book_suggestions_on_user_id"
   end
 
+<<<<<<< 5edf74c0343c7fd4f5e032eaeb8bd5d3db512b21
 =======
 >>>>>>> admin view created
+=======
+>>>>>>> added BookSuggestion
   create_table "books", force: :cascade do |t|
     t.string "genre", default: "", null: false
     t.string "author", default: "", null: false
