@@ -51,7 +51,6 @@ describe Api::V1::BookSuggestionsController, type: :controller do
         expect(response).to have_http_status(:unprocessable_entity)
       end
     end
-    
     context 'When creating a suggestion without link' do
       let!(:new_suggestion_attributes) { attributes_for(:book_suggestion, link: nil) }
       let(:book_creation_request) do
