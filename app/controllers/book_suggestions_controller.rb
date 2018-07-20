@@ -12,4 +12,3 @@ class BookSuggestionsController < ApplicationController
                                             :year, :user_id)
   end
 end
-
