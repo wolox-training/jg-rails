@@ -1,0 +1,6 @@
+es:
+  activerecord:
+    models:
+      book: "Libro"
+      attributes:
+        book: "Libro"

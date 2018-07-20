@@ -1,0 +1,8 @@
+es:
+  activerecord:
+    models:
+      rent: "Alquiler"
+      attributes:
+        from: "Desde"
+        to: "Hasta"
+        new_rent: "Nuevo alquiler"
