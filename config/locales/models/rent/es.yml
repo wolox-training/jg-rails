@@ -1,7 +1,9 @@
 es:
   activerecord:
     models:
-      rent: "Alquiler"
+      rent: 
+        one: "Alquiler"
+        other: "Alquileres"
       attributes:
         from: "Desde"
         to: "Hasta"

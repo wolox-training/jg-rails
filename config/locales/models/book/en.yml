@@ -1,6 +1,6 @@
 en:
   activerecord:
     models:
-      book: "Book"
-      attributes:
-        book: "Book"
+      book: 
+        one: "Book"
+        other: "Books"
