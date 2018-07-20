@@ -4,8 +4,13 @@ class ApiController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound, with: :render_nothing_bad_req
   protect_from_forgery with: :null_session
   before_action :current_user, :authenticate_request
+  rescue_from Pundit::NotAuthorizedError, with: :not_authorized
 
   private
+
+  def not_authorized
+    render json: { message: 'User not authorized' }, status: :unauthorized
+  end
 
   # Serializer methods
   def default_serializer_options

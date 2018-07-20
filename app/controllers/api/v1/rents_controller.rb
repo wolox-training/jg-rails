@@ -1,8 +1,6 @@
 module Api
   module V1
     class RentsController < ApiController
-      rescue_from Pundit::NotAuthorizedError, with: :not_authorized
-
       def index
         user = User.find(params[:user_id])
         authorize user, :show_rents?
@@ -28,10 +26,6 @@ module Api
 
       def rent_params
         params.require(:rent).permit(:user_id, :book_id, :to, :from)
-      end
-
-      def not_authorized
-        render json: { message: 'User not authorized' }, status: :unauthorized
       end
     end
   end
