@@ -6,8 +6,8 @@ Rails.application.routes.draw do
     resources :users do
       resources :rents, only: %i[create index]
     end
-    resources :book_suggestions, only: %i[create]
   end
+  resources :book_suggestions, only: %i[create new]
 
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
