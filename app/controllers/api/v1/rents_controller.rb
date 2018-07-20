@@ -29,10 +29,6 @@ module Api
       def rent_params
         params.require(:rent).permit(:user_id, :book_id, :to, :from)
       end
-
-      def not_authorized
-        render json: { message: 'User not authorized' }, status: :unauthorized
-      end
     end
   end
 end
