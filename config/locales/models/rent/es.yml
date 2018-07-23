@@ -5,6 +5,7 @@ es:
         one: "Alquiler"
         other: "Alquileres"
       attributes:
-        from: "Desde"
-        to: "Hasta"
-        new_rent: "Nuevo alquiler"
+        rent:
+          from: "Desde"
+          to: "Hasta"
+          new_rent: "Nuevo alquiler"

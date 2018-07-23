@@ -1,8 +1,11 @@
 en:
   activerecord:
     models:
-      rent: "Rent"
+      rent: 
+        one: "Rent"
+        other: "Rents"
       attributes:
-        from: "From"
-        to: "To"
-        new_rent: "New Rent"
+        rent:
+          from: "From"
+          to: "To"
+          new_rent: "New Rent"
