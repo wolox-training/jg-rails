@@ -26,5 +26,5 @@ test:
 production:
   <<: *default
   database: wbooks-api_production
-  username: myapp
+  username: wbooks-api
   password: <%= ENV['MYAPP_DATABASE_PASSWORD'] 
