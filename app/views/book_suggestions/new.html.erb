@@ -27,18 +27,18 @@
     </script>
   </head>
   <body>
-    <h1>Author</h1>
+    <h1><%= I18n.t('activerecord.models.book.author') %></h1>
     <input type="text" id="author"/>
-    <h1>Title</h1>
+    <h1><%= I18n.t('activerecord.models.book.title') %></h1>
     <input type="text" id="title"/>
-    <h1>Link</h1>
+    <h1><%= I18n.t('activerecord.models.book.link') %></h1>
     <input type="text" id="link"/>
-    <button type="button" onclick="new_suggestion();">Add suggestion</button>
+    <button type="button" onclick="new_suggestion();"><%= t('add_suggestion') %></button>
     <table>
       <tr>
-        <td>Author</td>
-        <td>Title</td> 
-        <td>Link</td>
+        <td><%= I18n.t('activerecord.models.book.author') %></td>
+        <td><%= I18n.t('activerecord.models.book.title') %></td> 
+        <td><%= I18n.t('activerecord.models.book.link') %></td>
       </tr>
       <tbody id="table">
       </tbody>
