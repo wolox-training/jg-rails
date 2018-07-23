@@ -4,7 +4,9 @@ describe Api::V1::BookSuggestionsController, type: :controller do
   describe 'POST #create' do
     context 'When creating a valid suggestion' do
       let!(:new_suggestion_attributes) { attributes_for(:book_suggestion) }
-      let(:book_creation_request) { post :create, params: { book_suggestion: new_suggestion_attributes } }
+      let(:book_creation_request) do
+        post :create, params: { book_suggestion: new_suggestion_attributes }
+      end
       it 'creates a new suggestion' do
         expect { book_creation_request }.to change { BookSuggestion.count }.by(1)
       end
@@ -18,7 +20,9 @@ describe Api::V1::BookSuggestionsController, type: :controller do
 
     context 'When creating a suggestion without author' do
       let!(:new_suggestion_attributes) { attributes_for(:book_suggestion, author: nil) }
-      let(:book_creation_request) { post :create, params: { book_suggestion: new_suggestion_attributes } }
+      let(:book_creation_request) do
+        post :create, params: { book_suggestion: new_suggestion_attributes }
+      end
       before do
         book_creation_request
       end
@@ -33,7 +37,9 @@ describe Api::V1::BookSuggestionsController, type: :controller do
     end
     context 'When creating a suggestion without title' do
       let!(:new_suggestion_attributes) { attributes_for(:book_suggestion, title: nil) }
-      let(:book_creation_request) { post :create, params: { book_suggestion: new_suggestion_attributes } }
+      let(:book_creation_request) do
+        post :create, params: { book_suggestion: new_suggestion_attributes }
+      end
       before do
         book_creation_request
       end
@@ -48,7 +54,9 @@ describe Api::V1::BookSuggestionsController, type: :controller do
     end
     context 'When creating a suggestion without link' do
       let!(:new_suggestion_attributes) { attributes_for(:book_suggestion, link: nil) }
-      let(:book_creation_request) { post :create, params: { book_suggestion: new_suggestion_attributes } }
+      let(:book_creation_request) do
+        post :create, params: { book_suggestion: new_suggestion_attributes }
+      end
       before do
         book_creation_request
       end
