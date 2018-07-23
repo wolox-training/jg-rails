@@ -1,14 +1,15 @@
 module Api
   module V1
     class RentsController < ApiController
-      include Wor::Paginate
       def index
         rents = Rent.where(user_id: params[:user_id])
         render_paginated rents, each_serializer: RentIndexSerializer
       end
 
       def create
-        return render json: { message: 'User id not allowed' }, status:	:unprocessable_entity unless check_user_id
+        if check_user_id
+          return render json: { message: 'User id not allowed' }, status:	:unprocessable_entity
+        end
         rent = Rent.new(rent_params)
         return render json: rent.errors, status: :unprocessable_entity unless rent.save
         RentMailer.new_rent(rent).deliver_later
