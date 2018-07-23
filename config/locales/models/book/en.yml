@@ -1,0 +1,6 @@
+en:
+  activerecord:
+    models:
+      book: 
+        one: "Book"
+        other: "Books"
