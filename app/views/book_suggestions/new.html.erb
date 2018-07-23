@@ -27,18 +27,18 @@
     </script>
   </head>
   <body>
-    <h1><%= I18n.t('activerecord.models.book.author') %></h1>
+    <h1><%= I18n.t('activerecord.attributes.book.author') %></h1>
     <input type="text" id="author"/>
-    <h1><%= I18n.t('activerecord.models.book.title') %></h1>
+    <h1><%= I18n.t('activerecord.attributes.book.title') %></h1>
     <input type="text" id="title"/>
-    <h1><%= I18n.t('activerecord.models.book.link') %></h1>
+    <h1><%= I18n.t('activerecord.attributes.book.link') %></h1>
     <input type="text" id="link"/>
-    <button type="button" onclick="new_suggestion();"><%= t('add_suggestion') %></button>
+    <button type="button" onclick="new_suggestion();"><%= I18n.t('activerecord.attributes.rent.new_suggestion') %></button>
     <table>
       <tr>
-        <td><%= I18n.t('activerecord.models.book.author') %></td>
-        <td><%= I18n.t('activerecord.models.book.title') %></td> 
-        <td><%= I18n.t('activerecord.models.book.link') %></td>
+        <td><%= I18n.t('activerecord.attributes.book.author') %></td>
+        <td><%= I18n.t('activerecord.attributes.book.title') %></td> 
+        <td><%= I18n.t('activerecord.attributes.book.link') %></td>
       </tr>
       <tbody id="table">
       </tbody>

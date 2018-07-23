@@ -4,8 +4,9 @@ es:
       rent: 
         one: "Alquiler"
         other: "Alquileres"
-      attributes:
-        rent:
-          from: "Desde"
-          to: "Hasta"
-          new_rent: "Nuevo alquiler"
+    attributes:
+      rent:
+        from: "Desde"
+        to: "Hasta"
+        new_rent: "Nuevo alquiler"
+        new_suggestion: "Nueva Sugerencias"
