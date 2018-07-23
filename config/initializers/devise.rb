@@ -3,13 +3,14 @@
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
+  require 'omniauth-google-oauth2'
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
   # config.secret_key = '407b604d41c294a2ec2bad4b66841c7811f4a70045c44496646e10171d7e565b30b27f67015731c5519957c9f0a1b6ed07c3e78bfb7b8146dce81ea827cee1a0'
-  
+
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
   # config.parent_controller = 'DeviseController'
@@ -226,10 +227,10 @@ Devise.setup do |config|
   # Require the `devise-encryptable` gem when using anything other than bcrypt
   # config.encryptor = :sha512
 
-  # ==> Scopes configuration
-  # Turn scoped views on. Before rendering "sessions/new", it will first check for
-  # "users/sessions/new". It's turned off by default because it's slower if you
-  # are using only default views.
+  # ==> Scopadd require "omniauth-google-oauth2"es configuration
+  # Turn scoadd require "omniauth-google-oauth2"ped views on. Before rendering "sessions/new", it will first check for
+  # "users/sadd require "omniauth-google-oauth2"essions/new". It's turned off by default because it's slower if you
+  # are usinadd require "omniauth-google-oauth2"g only default views.
   # config.scoped_views = false
 
   # Configure the default scope given to Warden. By default it's the first
@@ -258,7 +259,7 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
-
+  config.omniauth :google_oauth2, Rails.application.credentials.client_id, Rails.application.credentials.client_secret, {}
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.
