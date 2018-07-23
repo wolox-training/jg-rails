@@ -50,7 +50,10 @@ group :test do
 end
 gem 'wor-paginate'
 gem 'active_model_serializers', '~> 0.10.0'
-
+gem 'mailtrap'
+gem 'sidekiq'
+gem 'redis'
+gem 'activeadmin'
 # End Wolox training
 
 

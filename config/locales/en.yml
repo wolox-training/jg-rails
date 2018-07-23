@@ -31,3 +31,7 @@
 
 en:
   hello: "Hello world"
+  from: "From"
+  to: "To"
+  book: "Book"
+  new_rent: "New Rent"
