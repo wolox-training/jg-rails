@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   api_version(module: 'api/v1', path: { value: 'api/v1' }, defaults: { format: :json }) do
     resources :books, only: %i[index show]
     resources :users do
       resources :rents, only: %i[create index]
     end
+    resources :book_suggestions, only: %i[create]
   end
 
   devise_for :users

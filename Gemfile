@@ -53,6 +53,8 @@ gem 'active_model_serializers', '~> 0.10.0'
 gem 'mailtrap'
 gem 'sidekiq'
 gem 'redis'
+gem 'activeadmin'
+gem "pundit"
 # End Wolox training
 
 
