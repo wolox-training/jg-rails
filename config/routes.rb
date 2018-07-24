@@ -8,8 +8,7 @@ Rails.application.routes.draw do
     end
   end
   resources :book_suggestions, only: %i[create new]
-
-  devise_for :users
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   api_version(module: 'api/v1', path: { value: 'api/v1' }, defaults: { format: :json }) do

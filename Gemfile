@@ -55,6 +55,7 @@ gem 'sidekiq'
 gem 'redis'
 gem 'activeadmin'
 gem "pundit"
+gem 'omniauth-google-oauth2'
 # End Wolox training
 
 
