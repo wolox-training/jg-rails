@@ -9,9 +9,6 @@ module Api
       end
 
       def create
-        if check_user_id
-          return render json: { message: 'User id not allowed' }, status:	:unprocessable_entity
-        end
         rent = Rent.new(rent_params)
         authorize rent
         return render json: rent.errors, status: :unprocessable_entity unless rent.save
