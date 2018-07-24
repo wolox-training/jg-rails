@@ -4,3 +4,9 @@ en:
       book: 
         one: "Book"
         other: "Books"
+    attributes:
+      book:
+        author: "Author"
+        title: "Title"
+        link: "Link"
+

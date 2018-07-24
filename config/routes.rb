@@ -6,10 +6,9 @@ Rails.application.routes.draw do
     resources :users do
       resources :rents, only: %i[create index]
     end
-    resources :book_suggestions, only: %i[create]
   end
-
-  devise_for :users
+  resources :book_suggestions, only: %i[create new]
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   api_version(module: 'api/v1', path: { value: 'api/v1' }, defaults: { format: :json }) do

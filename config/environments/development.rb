@@ -72,5 +72,6 @@ Rails.application.configure do
     :authentication => :cram_md5
   }
   config.action_mailer.perform_deliveries = true
+  config.serve_static_assets = true
 
 end
