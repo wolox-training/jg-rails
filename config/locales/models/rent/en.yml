@@ -4,8 +4,9 @@ en:
       rent: 
         one: "Rent"
         other: "Rents"
-      attributes:
-        rent:
-          from: "From"
-          to: "To"
-          new_rent: "New Rent"
+    attributes:
+      rent:
+        from: "From"
+        to: "To"
+        new_rent: "New Rent"
+        new_suggestion: "New Suggestion"

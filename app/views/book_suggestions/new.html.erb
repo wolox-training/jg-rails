@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title>Suggestions</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+      function new_suggestion(){
+          var j ={"book_suggestion": {
+                      "title":  document.getElementById("title").value,
+                      "author": document.getElementById("author").value,
+                      "link": document.getElementById("link").value
+                  }
+          }
+          $.ajax({
+                  type: "POST",
+                  url: "http://localhost:3000/book_suggestions",
+                  data: JSON.stringify(j),
+                  contentType: "application/json",
+                  dataType: "json",
+                  success: function(response){
+                    $('#table').append("<tr><td>"+document.getElementById("author").value+"</td>"+
+                                      "<td>"+document.getElementById("title").value+"</td>"+
+                                      "<td>"+document.getElementById("link").value+"</td></tr>")
+                  }
+                });
+      }
+    </script>
+  </head>
+  <body>
+    <h1><%= I18n.t('activerecord.attributes.book.author') %></h1>
+    <input type="text" id="author"/>
+    <h1><%= I18n.t('activerecord.attributes.book.title') %></h1>
+    <input type="text" id="title"/>
+    <h1><%= I18n.t('activerecord.attributes.book.link') %></h1>
+    <input type="text" id="link"/>
+    <button type="button" onclick="new_suggestion();"><%= I18n.t('activerecord.attributes.rent.new_suggestion') %></button>
+    <table>
+      <tr>
+        <td><%= I18n.t('activerecord.attributes.book.author') %></td>
+        <td><%= I18n.t('activerecord.attributes.book.title') %></td> 
+        <td><%= I18n.t('activerecord.attributes.book.link') %></td>
+      </tr>
+      <tbody id="table">
+      </tbody>
+    </table>
+  </body>
+</html>
