@@ -10,4 +10,10 @@ class RentMailer < ActionMailer::Base
       mail to: @user.email, subject: I18n.t('activerecord.models.attributes.new_rent')
     end
   end
+
+  private
+
+  def locale(user)
+    I18n.locale = user.locale
+  end
 end
